@@ -1,0 +1,188 @@
+/*___________________________________________________*\
+
+    #Variables pour les couleurs
+\*___________________________________________________*/
+
+:root {
+
+  --color-first: #1EC36DD9;
+  --color-second: #F0F0F0;
+  --color-white: #FFF;
+  --color-success: #2ECC71;
+  --color-error: #E74C3C;
+
+  --linear-gradient: linear-gradient(45deg, var(--color-first),
+      var(--color-success));
+  /*
+        * Typographique
+    */
+
+  /* Font family*/
+
+
+  /* Font size*/
+  --fontSize-1: 4rem;
+  --fontSize-2: 3.2rem;
+  --fontSize-3: 2.4rem;
+  --fontSize-4: 2rem;
+  --fontSize-5: 1.8rem;
+  --fontSize-6: 1.6rem;
+  --fontSize-7: 1.4rem;
+  --fontSize-8: 1rem;
+  --fontSize-9: 0.8rem;
+
+  /* Font weight*/
+  --weight-Light: 300;
+  --weight-Regular: 500;
+  --weight-SemiBold: 600;
+  --weight-Bold: 700;
+  --weight-ExtratBold: 900;
+
+}
+
+
+
+/* Font family*/
+
+@font-face {
+  font-family: "title";
+  src: url(/assets/fonts/FrederickatheGreat-Regular.ttf);
+}
+
+/*___________________________________________________*\
+
+    #reset
+\*___________________________________________________*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: .2s linear;
+  outline: none;
+
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins';
+  background-color: var(--color-first);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200vh;
+  margin: 0;
+  /* overflow: hidden; */
+}
+
+.container {
+  background-color: var(--color-white);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  width: 400px;
+  max-width: 100%;
+}
+
+.header {
+  border-bottom: 1px solid var(--color-second);
+  background-color: #f7f7f7;
+  padding: 20px 40px;
+}
+
+.header h2 {
+  text-align: center;
+  font-size: italic;
+}
+
+.form {
+  padding: 30px 40px;
+}
+
+.form-control {
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.form-control label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  border: 2px solid var(--color-second);
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  display: block;
+  font-family: inherit;
+  font-size: 14px;
+  height: 40px;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.form-control i {
+  position: absolute;
+  top: 42px;
+  right: 10px;
+  visibility: hidden;
+}
+
+.form-control small {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form button {
+  background-color: var(--color-first);
+  border: 2px solid var(--color-first);
+  color: var(--color-white);
+  display: block;
+  font-family: inherit;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.form-control.success input {
+  border-color: var(--color-success);
+}
+
+.form-control.error input {
+  border-color: var(--color-error);
+}
+
+.form-control.success i.fa-check-circle {
+  color: var(--color-success);
+  visibility: visible;
+}
+
+.form-control.error i.fa-exclamation {
+  color: var(--color-error);
+  visibility: visible;
+}
+
+.form-control.error small {
+  color: var(--color-error);
+  visibility: visible;
+}
